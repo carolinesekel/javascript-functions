@@ -1,9 +1,21 @@
-function seed() {}
+function seed(a, b, c) {
+  return Array.prototype.slice.call(arguments);
+}
 
-function same([x, y], [j, k]) {}
+function same([x, y], [j, k]) {
+  return (x===j && y===k) ? true:false;
+}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
-function contains(cell) {}
+function contains(cell) {
+  this.forEach(element => {
+    if (element = cell){
+      return true;
+    }else{
+      return false;
+    }
+  });
+}
 
 const printCell = (cell, state) => {};
 
